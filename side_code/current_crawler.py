@@ -1,6 +1,10 @@
 import os
 
-file_current_crawler_path = 'current_crawler.txt'
+# Get the directory of the current script
+script_directory = os.path.dirname(os.path.abspath(__file__))
+
+# Use the absolute path for the file
+file_current_crawler_path = os.path.join(script_directory, 'current_crawler.txt')
 
 # 讀取當前數目
 with open(file_current_crawler_path, 'r') as f:
